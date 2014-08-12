@@ -35,7 +35,8 @@ func main() {
 					if text, err := walk.Clipboard().Text(); err != nil {
 						log.Print("Paste: ", err)
 					} else {
-						te.SetText(text)
+						log.Println("the paste text is", text)
+						te.ReplaceSelectedText(text, true)
 					}
 				},
 			},
